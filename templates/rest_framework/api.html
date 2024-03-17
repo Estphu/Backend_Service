@@ -1,0 +1,9 @@
+{% extends "rest_framework/base.html" %}
+   {% block title %} Backend Service - API {% endblock %}
+     {% block branding %}
+       <span>
+        <a class='navbar-brand' rel="nofollow" href="{% url 'users:home' %}">
+         DASHBOARD
+        </a>
+       </span>
+{% endblock %}

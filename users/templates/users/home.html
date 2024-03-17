@@ -1,0 +1,18 @@
+{% extends "users/base.html" %}
+{% block title %} Home Page {% endblock title%}
+{% block content %}
+    <div class="jumbotron my-4">
+        <h1 class="display-6">Welcome, {{user.username.title|default:'Guest'|upper}}</h1>
+        {% if user.is_authenticated %}
+            <hr class="my-4">
+            {% include "users/dashboard.html" %}
+        {% else %}
+            <p class="lead">
+                This is a <b>Backend Service,</b> which will expose a set of <b>Rest API</b> endpoints.
+                User could perform CRUD operations to his/her apps by associating a subscription with a pricing plan.
+            </p>
+            <hr class="my-4">
+        {% endif %}
+    </div>
+
+{% endblock content %}

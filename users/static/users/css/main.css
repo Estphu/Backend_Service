@@ -1,0 +1,56 @@
+.small-fs {
+    font-size: 0.8rem;
+}
+
+.dashboard-cards .card {
+    width: 300px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border: none
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6%;
+    transition: opacity 0.3s ease
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background color */
+    color: white;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    /* Transition for overlay opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-cards .card .card-title {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+/* Show text overlay on hover */
+.dashboard-cards .card:hover .card-img-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Reduce image opacity on hover */
+.dashboard-cards .card:hover .card-img {
+    opacity: 0.15;
+    cursor: pointer;
+}
